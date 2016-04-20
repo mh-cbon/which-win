@@ -1,0 +1,7 @@
+/.vagrant/
+/test/
+/utils/
+/Vagrantfile
+/mocha-windows.sh
+/node-setup.bat
+/run-tests.bat

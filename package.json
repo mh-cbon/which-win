@@ -1,0 +1,21 @@
+{
+  "name": "@mh-cbon/which-win",
+  "version": "1.0.0",
+  "description": "Tells which windows system information is being run",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-windows": "sh ./mocha-windows.sh",
+  },
+  "keywords": [
+    "windows", "version"
+  ],
+  "author": "mh-cbon <mh-cbon@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "should": "^8.3.1"
+  },
+  "dependencies": {
+    "split": "^1.0.0"
+  }
+}
