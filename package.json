@@ -1,6 +1,6 @@
 {
   "name": "@mh-cbon/which-win",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tells which windows system information is being run",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,8 @@
     "public": "npm publish --access=public"
   },
   "keywords": [
-    "windows", "version"
+    "windows",
+    "version"
   ],
   "author": "mh-cbon <mh-cbon@users.noreply.github.com>",
   "license": "MIT",
