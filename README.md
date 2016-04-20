@@ -1,6 +1,6 @@
 # which-win
 
-Tells which windows system information is being run.
+Tells which windows system version is being run.
 
 # install
 
