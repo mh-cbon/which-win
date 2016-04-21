@@ -10,9 +10,9 @@ var systemInfo = function (then) {
   child.stdout
   .pipe(split(/\r\n/))
   .on('data', function (d){
-    if (d.toString().match(/^OS Name/i)) {
+    if (!ret.name && d.toString().match(/^OS Name/i)) {
       ret.name = d.toString().match(/^OS Name:\s+(.+)/i)[1]
-    } else if (d.toString().match(/^OS Version/i)) {
+    } else if (!ret.version && d.toString().match(/^OS Version/i)) {
       ret.version = d.toString().match(/^OS Version:\s+([0-9.]+)/i)[1]
     }
   })
@@ -33,7 +33,7 @@ var ver = function (then) {
   child.stdout
   .pipe(split(/\r\n/))
   .on('data', function (d){
-    if (d.toString().match(/^Mic[^\[]+[\[]version\s([0-9.]+)[\]]/i)) {
+    if (!ret.version && d.toString().match(/^Mic[^\[]+[\[]version\s([0-9.]+)[\]]/i)) {
       ret.name = d.toString().match(/^([^\[]+)/i)[1].replace(/\s+$/, '')
       ret.version = d.toString().match(/^Mic[^\[]+[\[]version\s([0-9.]+)[\]]/i)[1]
       // let s do some patch, when +/- possible
@@ -53,11 +53,6 @@ var ver = function (then) {
 }
 
 var whichwin = function (then) {
-  var ret = {
-    name:     "",
-    version:  ""
-  }
-  return ver(then);
   systemInfo(function(err, ret) {
     if (err) return ver(then)
     then(err, ret)
