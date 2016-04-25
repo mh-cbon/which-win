@@ -1,0 +1,6 @@
+{
+  "name": "Which-win",
+  "tagline": "Tells which windows system version is being run",
+  "body": "# which-win\r\n\r\nTells which windows system version is being run.\r\n\r\n# install\r\n\r\n```sh\r\nnpm i @mh-cbon/which-win --save\r\n```\r\n\r\n# Usage\r\n\r\n```js\r\nrequire('@mh-cbon/which-win')(function (err, info) {\r\n  err && console.error(\"Not found\\n%s %j\", err, err);\r\n  !err && console.error('found version information\\n%j', info)\r\n})\r\n```\r\n\r\n# Internals\r\n\r\nIt relies on `systeminfo`, when it s available, otherwise it uses `ver` and a bunch of pre-built detection to give you better information.\r\n\r\n# read more\r\n- http://ss64.com/nt/systeminfo.html\r\n- https://technet.microsoft.com/en-us/library/bb491007.aspx\r\n- https://msdn.microsoft.com/en-us/library/ms724834%28VS.85%29.aspx\r\n- http://www.msigeek.com/442/windows-os-version-numbers\r\n- http://www.nirmaltv.com/2009/08/17/windows-os-version-numbers/\r\n- http://www.robvanderwoude.com/ver.php\r\n- http://www.robvanderwoude.com/ver.php\r\n- https://msdn.microsoft.com/en-us/library/windows/desktop/ms724832%28v=vs.85%29.aspx\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
